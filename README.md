@@ -12,4 +12,4 @@
   
 Our experiments are performed by RTX A5000 GPU. In addition, you need to install cuDNN8.0 and CUDA11.0 and download datasets in the links provided by corresponding literatures.
 # Implement
-CUDA_VISIBLE_DEVICES=1 python main1.py
+CUDA_VISIBLE_DEVICES=1 python main.py

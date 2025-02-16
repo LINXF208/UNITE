@@ -185,14 +185,14 @@ class UNITE(keras.Model):
         pred_error = tf.reduce_mean(tf.square(train_y - y_pre))   
         print("Train loss", pred_error)
 
-        rep_error_1 = self.rep_alpha * utils.comp_hsic(train_hidden, train_input_t)
+        rep_error = self.rep_alpha * utils.comp_hsic(train_hidden, train_input_t)
         cross_error = self.cross_alpha * utils.comp_hsic(train_GNN, train_hidden)
-        print("hsic rep_loss", rep_error_1, "cross_loss", cross_error)
+        print("hsic rep_loss", rep_error, "cross_loss", cross_error)
 
-        L_1 =   rep_error_1 + pred_error + cross_error + regularization
-        print("total loss", L_1)
+        L =   rep_error + pred_error + cross_error + regularization
+        print("total loss", L)
 
-        return L_1
+        return L
 
     def get_grad(self, input_tensor, y, train_idx):
         with tf.GradientTape() as tape:

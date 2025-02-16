@@ -25,10 +25,10 @@ def comp_hsic(X, t, s_x=1, s_y=1):
     m = X.shape[0]
 
     H = tf.raw_ops.MatrixDiag(diagonal=tf.ones(shape=[m, ])) - 1 / m
-    LH = tf.matmul(L,H)
-    HLH = tf.matmul(H,LH)
-    KHLH = tf.matmul(K,HLH)
-    HSIC = tf.linalg.trace(KHLH)/((m-1)**2)
+    LH = tf.matmul(L, H)
+    HLH = tf.matmul(H, LH)
+    KHLH = tf.matmul(K, HLH)
+    HSIC = tf.linalg.trace(KHLH)/((m - 1) ** 2)
 
     return HSIC
 

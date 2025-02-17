@@ -297,5 +297,3 @@ class UNITE(keras.Model):
         output_C = self.final_out_y0(outnn_C)
 
         return output_T, output_C 
-
-   

@@ -394,15 +394,3 @@ def config_pare(
     }
 
     return config
-
-    
-
-
-
-
-
-
-
-
-
-

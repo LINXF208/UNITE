@@ -196,4 +196,3 @@ class GCNLayer(keras.layers.Layer):
         output = self.activation(output)
       
         return output
-    
